@@ -12659,6 +12659,116 @@ textarea.form-control {
   pointer-events: none; /* Ensure that the overlay does not interfere with clicks on the underlying project */
 }
 
+/* Transition for box hover effect */
+.transition-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transition-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Transition for icon hover effect */
+.transition-icon {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.transition-box:hover .transition-icon {
+  background-color: #2a9d8f; /* Change to your preferred hover color */
+  color: #ffff;
+}
+
+/* Transition for links */
+.transition-link {
+  color: #ffbd39;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.transition-link:hover {
+  color: #ffff; /* Change to your preferred hover color */
+  text-decoration: underline;
+}
+
+/* Transition for social media icons */
+.ftco-footer-social li a {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.ftco-footer-social li a:hover {
+  transform: translateY(-5px);
+  color: #2a9d8f; /* Change to your preferred hover color */
+}
+
+/*From here*/
+#home-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-drop-container {
+  margin-top: 20px; /* Adjust space between buttons and icons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-drop {
+  display: flex;
+  justify-content: space-between;
+  width: 200px; /* Adjust width according to the number of icons */
+}
+
+.drop-icon {
+  position: relative;
+  opacity: 0;
+  width: 30px; /* Smaller size for icons */
+  transform: translateX(-150%); /* Start far off-screen */
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out,
+    transform 0.3s ease-in 0.6s, width 0.3s ease-in 0.6s;
+}
+
+.aws-icon {
+  animation: slideIn 0.6s ease-out 0.2s forwards,
+    rippleGrow 0.3s ease-in 0.8s forwards;
+}
+
+.devops-icon {
+  animation: slideIn 0.6s ease-out 0.4s forwards,
+    rippleGrow 0.3s ease-in 1s forwards;
+}
+
+.mern-icon {
+  animation: slideIn 0.6s ease-out 0.6s forwards,
+    rippleGrow 0.3s ease-in 1.2s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rippleGrow {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    width: 40px; /* Grow icon size slightly */
+    opacity: 1;
+  }
+}
+
+/*To here*/
+
 @keyframes loader-dash {
   0% {
     stroke-dasharray: 1, 200;
