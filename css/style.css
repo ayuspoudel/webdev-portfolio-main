@@ -12783,3 +12783,68 @@ textarea.form-control {
     stroke-dashoffset: -136px;
   }
 }
+
+/* Clickable Experience Box */
+.experience-card {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.05); /* Transparent background */
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  color: #fff;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hover effect */
+.clickable-box:hover .experience-card {
+  background-color: #17a2b8; /* Matches the hover color from your website */
+  transform: scale(1.02); /* Slight zoom effect */
+  text-decoration: none;
+}
+
+/* Link styles */
+.clickable-box {
+  text-decoration: none;
+}
+.clickable-box p {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0;
+}
+/* Clickable Experience Box */
+.experience-card {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.05); /* Transparent background */
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  color: #fff;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.clickable-box:hover .experience-card {
+  background-color: #17a2b8; /* Matches the hover color from your website */
+  transform: scale(1.03); /* Slight zoom effect */
+  text-decoration: none;
+}
+
+/* Click for More Info text */
+.click-hint {
+  display: block;
+  font-size: 0.9rem;
+  color: #17a2b8;
+  text-align: right;
+  margin-top: 10px;
+  font-style: italic;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show "Click for More Info" only on hover */
+.clickable-box:hover .click-hint {
+  opacity: 1;
+}
